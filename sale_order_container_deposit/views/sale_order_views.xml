@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_container_deposit" model="ir.ui.view">
+        <field name="name">sale.order.form.container.deposit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//div[@class='o_form_sheetbg']" position="inside">
+                <group string="Quantities (split)">
+                    <group>
+                        <field name="total_qty_regular" readonly="1"/>
+                        <field name="total_qty_container_deposit" readonly="1"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
