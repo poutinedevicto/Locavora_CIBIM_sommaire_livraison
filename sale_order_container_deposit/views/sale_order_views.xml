@@ -5,13 +5,11 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//sheet//div[@class='o_form_sheetbg']" position="inside">
-                <group string="Quantities (split)">
-                    <group>
-                        <field name="total_qty_regular" readonly="1"/>
-                        <field name="total_qty_container_deposit" readonly="1"/>
-                    </group>
-                </group>
+            <xpath expr="//header" position="inside">
+                <div class="oe_button_box" role="group">
+                    <field name="total_qty_regular" readonly="1" widget="monetary" options="{&quot;no_open&quot;: true}"/>
+                    <field name="total_qty_container_deposit" readonly="1" widget="monetary" options="{&quot;no_open&quot;: true}"/>
+                </div>
             </xpath>
         </field>
     </record>
