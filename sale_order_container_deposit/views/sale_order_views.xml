@@ -7,8 +7,9 @@
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
                 <div class="oe_button_box" role="group">
-                    <field name="total_qty_regular" readonly="1" widget="monetary" options="{&quot;no_open&quot;: true}"/>
-                    <field name="total_qty_container_deposit" readonly="1" widget="monetary" options="{&quot;no_open&quot;: true}"/>
+                    <field name="partner_tag_ids" widget="many2many_tags" options="{'no_create': True}" readonly="1"/>
+                    <field name="total_qty_regular" readonly="1"/>
+                    <field name="total_qty_container_deposit" readonly="1"/>
                 </div>
             </xpath>
         </field>

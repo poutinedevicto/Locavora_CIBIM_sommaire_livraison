@@ -7,6 +7,9 @@ CONTAINER_CATEGORY_NAME = 'contenant_consigne'
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
+    # Expose customer tags (partner categories) directly on the sale.order
+    partner_tag_ids = fields.Many2many('res.partner.category', related='partner_id.category_id', string='Customer Tags', store=True)
+
     total_qty_regular = fields.Float(string='Total Qty (regular)', compute='_compute_total_qtys', store=True)
     total_qty_container_deposit = fields.Float(string='Total Qty (container/deposit)', compute='_compute_total_qtys', store=True)
 
