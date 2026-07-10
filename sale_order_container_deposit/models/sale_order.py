@@ -16,7 +16,8 @@ class SaleOrder(models.Model):
     def _compute_partner_tags(self):
         for order in self:
             tags = order.partner_id.category_id
-n            order.partner_tag_names = ', '.join(tags.mapped('name')) if tags else ''
+            order.partner_tag_names = ', '.join(tags.mapped('name')) if tags else ''
+
     total_qty_container_deposit = fields.Float(string='Total Qty (container/deposit)', compute='_compute_total_qtys', store=True)
 
     @api.depends('order_line.product_uom_qty', 'order_line.product_id', 'order_line.product_id.categ_id')
