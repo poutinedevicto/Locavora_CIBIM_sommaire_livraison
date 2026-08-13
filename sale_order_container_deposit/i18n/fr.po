@@ -39,3 +39,8 @@ msgstr "Bon de commande"
 #: model:ir.model.fields,field_description:sale_order_container_deposit.field_sale_order__amount_total
 msgid "Total"
 msgstr "Total $$$"
+
+#. module: sale_order_container_deposit
+#: model:ir.model.fields,field_description:sale_order_container_deposit.field_sale_order__amount_total
+msgid "amount_total"
+msgstr "Total $$$"
